@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
 <title>Masked Attacker Chess</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 
 <style>
 
@@ -20,63 +21,73 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Poppins,sans-serif;
+}
+
+html{
+height:100%;
 }
 
 body{
 
-background:#050505;
-background-image:
-radial-gradient(circle at top,#2c2207 0%,#050505 55%);
+font-family:Poppins,sans-serif;
 
-color:white;
+min-height:100vh;
 
 display:flex;
 justify-content:center;
 align-items:center;
 
-min-height:100vh;
-padding:30px;
+padding:18px;
+
+background:
+linear-gradient(rgba(0,0,0,.68),rgba(0,0,0,.82)),
+url("bg.jpg");
+
+background-size:cover;
+background-position:left center;
+background-repeat:no-repeat;
+background-attachment:fixed;
+
+overflow-x:hidden;
+
+color:#fff;
 
 }
 
 .container{
 
 width:100%;
-max-width:520px;
+max-width:470px;
 
-padding:35px;
-
-border-radius:28px;
-
-background:rgba(18,18,18,.82);
+background:rgba(10,10,10,.55);
 
 backdrop-filter:blur(18px);
 
-border:1px solid rgba(255,215,0,.2);
+border:1px solid rgba(255,193,7,.15);
+
+border-radius:28px;
+
+padding:22px;
 
 box-shadow:
-
-0 0 50px rgba(255,200,0,.18);
+0 0 40px rgba(255,193,7,.12);
 
 }
 
 .logo{
 
-width:150px;
-height:150px;
+width:105px;
+height:105px;
 
 margin:auto;
 
 border-radius:50%;
 
-border:4px solid #FFC107;
-
 overflow:hidden;
 
-box-shadow:
+border:3px solid #FFC107;
 
-0 0 25px gold;
+box-shadow:0 0 25px rgba(255,193,7,.55);
 
 }
 
@@ -90,15 +101,15 @@ object-fit:cover;
 
 h1{
 
+margin-top:14px;
+
 text-align:center;
 
-margin-top:25px;
-
-font-size:38px;
+font-size:34px;
 
 font-weight:800;
 
-line-height:1.1;
+line-height:1;
 
 }
 
@@ -108,31 +119,33 @@ color:#FFC107;
 
 }
 
-p{
+.subtitle{
+
+margin-top:10px;
 
 text-align:center;
 
-margin-top:12px;
+font-size:14px;
 
-color:#cfcfcf;
+line-height:1.6;
 
-line-height:1.7;
+color:#d8d8d8;
 
 }
 
 .links{
 
-margin-top:35px;
+margin-top:22px;
 
 display:flex;
 
 flex-direction:column;
 
-gap:18px;
+gap:12px;
 
 }
 
-.btn{
+.button{
 
 display:flex;
 
@@ -140,29 +153,27 @@ align-items:center;
 
 justify-content:space-between;
 
+padding:14px 18px;
+
 text-decoration:none;
 
-padding:18px 22px;
-
-background:#0e0e0e;
+background:rgba(18,18,18,.88);
 
 border-radius:60px;
 
-border:1px solid rgba(255,193,7,.25);
+border:1px solid rgba(255,193,7,.18);
 
-transition:.3s;
+transition:.25s;
 
 }
 
-.btn:hover{
+.button:hover{
 
-transform:translateY(-4px);
+transform:translateY(-2px);
 
-background:#181818;
+border-color:#FFC107;
 
-box-shadow:
-
-0 0 18px rgba(255,193,7,.45);
+box-shadow:0 0 16px rgba(255,193,7,.35);
 
 }
 
@@ -172,91 +183,151 @@ display:flex;
 
 align-items:center;
 
-gap:18px;
+gap:14px;
 
 }
 
 .icon{
 
-width:58px;
-height:58px;
+width:48px;
+height:48px;
 
 border-radius:50%;
 
 display:flex;
 
-align-items:center;
-
 justify-content:center;
-
-font-size:26px;
-
-background:#151515;
-
-color:#FFC107;
-
-border:2px solid rgba(255,193,7,.4);
-
-}
-
-.text h3{
+align-items:center;
 
 font-size:20px;
 
+background:#171717;
+
+color:#FFC107;
+
+border:2px solid rgba(255,193,7,.28);
+
+flex-shrink:0;
+
 }
 
-.text span{
+.info h3{
 
-color:#bcbcbc;
+font-size:17px;
 
-font-size:14px;
+font-weight:600;
+
+}
+
+.info span{
+
+font-size:12px;
+
+color:#bdbdbd;
 
 }
 
 .arrow{
 
-font-size:22px;
+font-size:18px;
 
 color:#FFC107;
 
 }
 
-footer{
+.footer{
 
-margin-top:35px;
+margin-top:18px;
 
 text-align:center;
 
-color:#888;
+font-size:13px;
 
-font-size:14px;
+color:#999;
 
 }
 
+/* Mobile */
+
 @media(max-width:600px){
+
+body{
+
+padding:10px;
+
+align-items:flex-start;
+
+}
 
 .container{
 
-padding:22px;
+padding:16px;
+
+border-radius:20px;
 
 }
 
 .logo{
 
-width:120px;
-height:120px;
+width:85px;
+height:85px;
 
 }
 
 h1{
 
-font-size:30px;
+font-size:27px;
 
 }
 
-.text h3{
+.subtitle{
 
-font-size:18px;
+font-size:12px;
+
+line-height:1.4;
+
+}
+
+.links{
+
+gap:8px;
+
+margin-top:18px;
+
+}
+
+.button{
+
+padding:10px 14px;
+
+}
+
+.icon{
+
+width:42px;
+height:42px;
+
+font-size:17px;
+
+}
+
+.info h3{
+
+font-size:15px;
+
+}
+
+.info span{
+
+font-size:11px;
+
+}
+
+.footer{
+
+font-size:11px;
+
+margin-top:14px;
 
 }
 
@@ -276,73 +347,95 @@ font-size:18px;
 
 </div>
 
-<h1>Masked <span class="gold">Attacker</span></h1>
+<h1>
 
-<p>
-Chess Content • Live Streams • Courses
-<br>
+Masked <span class="gold">Attacker</span>
+
+</h1>
+
+<p class="subtitle">
+
+♟ Chess Content • Live Streams • Courses<br>
+
 Strategy • Tactics • Improvement
+
 </p>
 
 <div class="links">
 
-<a class="btn" href="https://www.youtube.com/@MaskedAttacker64" target="_blank">
+<a class="button"
+href="https://www.youtube.com/@MaskedAttacker64"
+target="_blank">
 
 <div class="left">
 
 <div class="icon">
+
 <i class="fab fa-youtube"></i>
+
 </div>
 
-<div class="text">
+<div class="info">
 
 <h3>YouTube</h3>
 
-<span>Watch Videos & Live Streams</span>
+<span>Videos & Live Streams</span>
 
 </div>
 
 </div>
 
 <div class="arrow">
+
 <i class="fas fa-chevron-right"></i>
+
 </div>
 
 </a>
 
-<a class="btn" href="https://www.instagram.com/masked_attacker64/" target="_blank">
+<a class="button"
+href="https://www.instagram.com/masked_attacker64/"
+target="_blank">
 
 <div class="left">
 
 <div class="icon">
+
 <i class="fab fa-instagram"></i>
+
 </div>
 
-<div class="text">
+<div class="info">
 
 <h3>Instagram</h3>
 
-<span>Daily Chess Content</span>
+<span>Daily Chess Posts</span>
 
 </div>
 
 </div>
 
 <div class="arrow">
+
 <i class="fas fa-chevron-right"></i>
+
 </div>
 
 </a>
 
-<a class="btn" href="https://www.chess.com/member/masked_attacker64" target="_blank">
+<a class="button"
+href="https://www.chess.com/member/masked_attacker64"
+target="_blank">
 
 <div class="left">
 
 <div class="icon">
+
 ♔
+
 </div>
 
-<div class="text">
+<div class="info">
 
 <h3>Chess.com</h3>
 
@@ -353,20 +446,26 @@ Strategy • Tactics • Improvement
 </div>
 
 <div class="arrow">
+
 <i class="fas fa-chevron-right"></i>
+
 </div>
 
 </a>
 
-<a class="btn" href="https://lichess.org/@/masked_attacker64" target="_blank">
+<a class="button"
+href="https://lichess.org/@/masked_attacker64"
+target="_blank">
 
 <div class="left">
 
 <div class="icon">
+
 ♞
+
 </div>
 
-<div class="text">
+<div class="info">
 
 <h3>Lichess</h3>
 
@@ -377,20 +476,23 @@ Strategy • Tactics • Improvement
 </div>
 
 <div class="arrow">
+
 <i class="fas fa-chevron-right"></i>
+
 </div>
 
 </a>
 
 </div>
 
-<footer>
+<div class="footer">
 
-♟️ Masked Attacker Chess
+♟ Masked Attacker Chess
 
-</footer>
+</div>
 
 </div>
 
 </body>
+
 </html>
