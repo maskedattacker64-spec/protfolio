@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Masked Attacker Chess</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+
+background:#050505;
+background-image:
+radial-gradient(circle at top,#2c2207 0%,#050505 55%);
+
+color:white;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+min-height:100vh;
+padding:30px;
+
+}
+
+.container{
+
+width:100%;
+max-width:520px;
+
+padding:35px;
+
+border-radius:28px;
+
+background:rgba(18,18,18,.82);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,215,0,.2);
+
+box-shadow:
+
+0 0 50px rgba(255,200,0,.18);
+
+}
+
+.logo{
+
+width:150px;
+height:150px;
+
+margin:auto;
+
+border-radius:50%;
+
+border:4px solid #FFC107;
+
+overflow:hidden;
+
+box-shadow:
+
+0 0 25px gold;
+
+}
+
+.logo img{
+
+width:100%;
+height:100%;
+object-fit:cover;
+
+}
+
+h1{
+
+text-align:center;
+
+margin-top:25px;
+
+font-size:38px;
+
+font-weight:800;
+
+line-height:1.1;
+
+}
+
+.gold{
+
+color:#FFC107;
+
+}
+
+p{
+
+text-align:center;
+
+margin-top:12px;
+
+color:#cfcfcf;
+
+line-height:1.7;
+
+}
+
+.links{
+
+margin-top:35px;
+
+display:flex;
+
+flex-direction:column;
+
+gap:18px;
+
+}
+
+.btn{
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+text-decoration:none;
+
+padding:18px 22px;
+
+background:#0e0e0e;
+
+border-radius:60px;
+
+border:1px solid rgba(255,193,7,.25);
+
+transition:.3s;
+
+}
+
+.btn:hover{
+
+transform:translateY(-4px);
+
+background:#181818;
+
+box-shadow:
+
+0 0 18px rgba(255,193,7,.45);
+
+}
+
+.left{
+
+display:flex;
+
+align-items:center;
+
+gap:18px;
+
+}
+
+.icon{
+
+width:58px;
+height:58px;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:26px;
+
+background:#151515;
+
+color:#FFC107;
+
+border:2px solid rgba(255,193,7,.4);
+
+}
+
+.text h3{
+
+font-size:20px;
+
+}
+
+.text span{
+
+color:#bcbcbc;
+
+font-size:14px;
+
+}
+
+.arrow{
+
+font-size:22px;
+
+color:#FFC107;
+
+}
+
+footer{
+
+margin-top:35px;
+
+text-align:center;
+
+color:#888;
+
+font-size:14px;
+
+}
+
+@media(max-width:600px){
+
+.container{
+
+padding:22px;
+
+}
+
+.logo{
+
+width:120px;
+height:120px;
+
+}
+
+h1{
+
+font-size:30px;
+
+}
+
+.text h3{
+
+font-size:18px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="logo">
+
+<img src="logo.png">
+
+</div>
+
+<h1>Masked <span class="gold">Attacker</span></h1>
+
+<p>
+Chess Content • Live Streams • Courses
+<br>
+Strategy • Tactics • Improvement
+</p>
+
+<div class="links">
+
+<a class="btn" href="https://www.youtube.com/@MaskedAttacker64" target="_blank">
+
+<div class="left">
+
+<div class="icon">
+<i class="fab fa-youtube"></i>
+</div>
+
+<div class="text">
+
+<h3>YouTube</h3>
+
+<span>Watch Videos & Live Streams</span>
+
+</div>
+
+</div>
+
+<div class="arrow">
+<i class="fas fa-chevron-right"></i>
+</div>
+
+</a>
+
+<a class="btn" href="https://www.instagram.com/masked_attacker64/" target="_blank">
+
+<div class="left">
+
+<div class="icon">
+<i class="fab fa-instagram"></i>
+</div>
+
+<div class="text">
+
+<h3>Instagram</h3>
+
+<span>Daily Chess Content</span>
+
+</div>
+
+</div>
+
+<div class="arrow">
+<i class="fas fa-chevron-right"></i>
+</div>
+
+</a>
+
+<a class="btn" href="https://www.chess.com/member/masked_attacker64" target="_blank">
+
+<div class="left">
+
+<div class="icon">
+♔
+</div>
+
+<div class="text">
+
+<h3>Chess.com</h3>
+
+<span>Play Against Me</span>
+
+</div>
+
+</div>
+
+<div class="arrow">
+<i class="fas fa-chevron-right"></i>
+</div>
+
+</a>
+
+<a class="btn" href="https://lichess.org/@/masked_attacker64" target="_blank">
+
+<div class="left">
+
+<div class="icon">
+♞
+</div>
+
+<div class="text">
+
+<h3>Lichess</h3>
+
+<span>Follow My Games</span>
+
+</div>
+
+</div>
+
+<div class="arrow">
+<i class="fas fa-chevron-right"></i>
+</div>
+
+</a>
+
+</div>
+
+<footer>
+
+♟️ Masked Attacker Chess
+
+</footer>
+
+</div>
+
+</body>
+</html>
